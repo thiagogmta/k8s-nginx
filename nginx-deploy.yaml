@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deploy
+  labels:
+    app: nginx-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-deploy
+  strategy:
+    #rollingUpdate:
+    #  maxSurge: 25%
+    #  maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: nginx-deploy
+    spec:
+      containers:
+      - name: nginx-deploy
+        image: nginx
+        #resources:
+        #  limits:
+        #    memory: "128Mi"
+        #    cpu: "500m"
+        ports:
+        - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-deploy
+spec:
+  selector:
+    app: nginx-deploy
+  ports:
+  - port: 80
+  type: NodePort
