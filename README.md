@@ -12,6 +12,15 @@ Temos dois arquivos nesse repositório:
    1. Esse arquivo de texte apenas cria um pod com o nginx
 2. nginx-deploy.yaml
    1. Esse arquivo cria um deployment com 3 pods do nginx
+3. k8s.sh
+   1. Esse arquivo é apenas um shell que você pode utilizar para facilitar o processo de exclusão de deployments, pods e services. Para utiliza-lo basta:
+
+```bash
+$ chmod +x k8s.sh
+$ ./k8s.sh
+```
+
+
 
 ## Efetuando o deploy
 
