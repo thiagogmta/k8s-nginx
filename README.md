@@ -42,15 +42,15 @@ $ kubectl get svc
 
 O retorno deve ser algo semelhante a:
 
-![deploy](/home/thiago/meu-pod/img/deploy.png)
+![deploy](img/deploy.png)
 
 Figura 1: Retorno do Deployment
 
-![pods ativos](/home/thiago/meu-pod/img/pods2.png)
+![pods ativos](img/pods2.png)
 
 Figura 2: Retorno dos PODs
 
-![retorno do svc](/home/thiago/meu-pod/img/svc.png)
+![retorno do svc](img/svc.png)
 
 Figura 3: Retorno do Service
 
@@ -72,7 +72,7 @@ Obser que na figura 3 o service realiza uma alteração da porta padrão do noss
 http://192.168.99.100:30494
 ```
 
-![nginx](/home/thiago/meu-pod/img/nginx.png)
+![nginx](img/nginx.png)
 
 Figura 4: Teste do serviço.
 
